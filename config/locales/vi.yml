@@ -1,0 +1,68 @@
+vi:
+  main_info: "Nội dung chính"
+  slide_info: "Nội dung chạy ngang"
+  footer_info: "Nội dung dưới cùng"
+  layouts:
+    erp:
+      backend:
+        sidebar:
+          content: "Quản lý nội dung"
+          contents: "Nội dung Website"
+  erp:
+    contents:
+      backend:
+        contents:
+          create:
+            success: "Nội dung được tạo thành công."
+          update:
+            success: "Nội dung cập nhật thành công."
+          archive:
+            success: "Nội dung đã ngưng sử dụng thành công"
+          unarchive:
+            success: "Nội dung đã được sử dụng lại thành công"
+          archive_all:
+            success: "Nội dung đã ngưng sử dụng thành công"
+          unarchive_all:
+            success: "Nội dung đã được sử dụng lại thành công"
+          destroy:
+            success: "Nội dung đã xóa thành công"
+          destroy_all:
+            success: "Nội dung đã xóa thành công"
+          index:
+            contents: "Nội dung Website"
+            archived: "Nội dung không còn sử dụng"
+            archived: "Nội dung đang sử dụng"
+            name: "Tên nội dung"
+            position: "Vị trí"
+            create: "Tạo nội dung mới"            
+          list:
+            name: "Tên nội dung"
+            position: "Vị trí"
+            no_matching_records_found: "Danh sách hiện tại đang trống."
+          new:
+            contents: "Nội dung Website"
+            create: "Tạo nội dung mới"
+          edit:
+            contents: "Nội dung Website"
+            create: "Tạo nội dung mới"
+          form:
+            name: "Tên nội dung"
+            placeholder_name: "Nhập tên nội dung"
+            alias: "Vị trí hiển thị"
+            content: "Nội dung cần hiển thị"
+  activerecord:
+    errors:
+      models:
+        erp/contents/content:
+          attributes:
+            name:
+              blank: "không được để trống."
+            position:
+              blank: "không được để trống."
+            content:
+              blank: "không được để trống."
+    attributes:
+      erp/contents/content:
+        name: "Tên nội dung"
+        position: "Vị trí"
+        content: "Nội dung"

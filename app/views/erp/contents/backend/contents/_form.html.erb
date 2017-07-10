@@ -1,0 +1,37 @@
+<%= form_for([erp_contents, :backend, content]) do |f| %>
+    <div class="row">
+        <div class="col-md-6">
+            <%= erp_form_control("text", {
+                name: 'content[name]',
+                value: content.name,                   
+                label: t('.name'),
+                placeholder: t('.placeholder_name'),
+                required: true,
+                errors: content.errors.full_messages_for(:name)
+            }) %>
+        </div>
+        <div class="col-md-6">
+            <%= erp_form_control('select', {
+                label: t('.alias'),
+                name: 'content[position]',
+                value: content.position,
+                options: Erp::Contents::Content.get_alias_options(),
+                required: true,
+                errors: content.errors.full_messages_for(:position)
+            }) %>
+        </div>
+    </div>
+    <%= erp_form_control("editor", {
+        name: 'content[content]',
+        value: content.content,
+        label: t('.content')
+    }) %>  
+    <hr>
+    <%= erp_component('button/save', {
+        text: t('submit')
+    }) %>
+    <%= erp_component('button/cancel', {
+        text: t('cancel'),
+        href: erp_contents.backend_contents_path
+    }) %>
+<% end %>
