@@ -72,32 +72,8 @@
                         <%= erp_datalist_row_actions(
                             [
                                 {
-                                    text: '<i class="fa fa-edit"></i> '+t('.edit'),
+                                    text: '<i class="fa fa-edit"></i> '+t('edit'),
                                     href: erp_contents.edit_backend_content_path(content)
-                                },
-                                {
-                                    text: '<i class="fa fa-ban"></i> '+t('archive'),
-                                    url: erp_contents.archive_backend_contents_path(id: content),
-                                    data_method: 'PUT',
-                                    hide: content.archived,
-                                    class: 'ajax-link'
-                                },
-                                {
-                                    text: '<i class="fa fa-check"></i> '+t('unarchive'),
-                                    url: erp_contents.unarchive_backend_contents_path(id: content),
-                                    data_method: 'PUT',
-                                    hide: !content.archived,
-                                    class: 'ajax-link'
-                                },
-                                {
-                                    divider: true
-                                },
-                                {
-                                    text: '<i class="fa fa-trash"></i> '+t('.delete'),
-                                    url: erp_contents.backend_content_path(content),
-                                    data_method: 'DELETE',
-                                    class: 'ajax-link',
-                                    data_confirm: t('.delete_confirm')
                                 }
                             ]
                         ) %>

@@ -6,14 +6,6 @@
     <i class="fa fa-rss-square"></i> <%= t('.contents') %>
 <% end %>
 
-<% content_for :page_toolbar do %>
-    <%= erp_component('button/create', {
-        text: t('.create'),
-        href: erp_contents.new_backend_content_path,
-        class: 'btn-noborder'
-    }) %>
-<% end %>
-
 <%= erp_datalist(
     url: erp_contents.list_backend_contents_path,
     keywords: [
@@ -27,27 +19,6 @@
                 name: 'erp_users.id',
                 data_url: erp.dataselect_backend_users_path
             }
-        }
-    ],
-    actions: [
-        {
-            text: '<i class="fa fa-ban"></i> '+t('.archive'),
-            url: erp_contents.archive_all_backend_contents_path,
-            data_method: 'PUT'
-        },
-        {
-            text: '<i class="fa fa-check"></i> '+t('.unarchive'),
-            url: erp_contents.unarchive_all_backend_contents_path,
-            data_method: 'PUT'
-        },
-        {
-            divider: true
-        },
-        {
-            text: '<i class="fa fa-trash"></i> '+t('.delete'),
-            url: erp_contents.delete_all_backend_contents_path,
-            data_method: 'DELETE',
-            data_confirm: t('.delete_confirm')
         }
     ],
     filters: [
